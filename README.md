@@ -27,3 +27,4 @@ That repository is an extract from [Adafruit-GFX-Library](https://github.com/ada
 
 - fontconvert fron Adafruit-GFX-Library : https://github.com/Adafruit/Adafruit-GFX-Library/tree/master/license.txt
 - fonts from debian packages : https://packages.debian.org/fr/stable/fonts-cantarell, https://packages.debian.org/fr/buster/fonts-noto-mono
+- FreeMono from https://www.fontspace.com/freemono-font-f13275

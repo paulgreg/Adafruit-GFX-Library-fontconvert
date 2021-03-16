@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Ugly little Bash script, generates a set of .h files for GFX using
 # GNU FreeFont sources.  There are three fonts: 'Mono' (Courier-like),
@@ -13,11 +13,12 @@
 # http://savannah.gnu.org/projects/freefont/
 
 convert=./fontconvert
-inpath=~/Desktop/freefont/
-outpath=../Fonts/
-fonts=(FreeMono FreeSans FreeSerif)
-styles=("" Bold Italic BoldItalic Oblique BoldOblique)
-sizes=(9 12 18 24)
+inpath=./in/
+outpath=./out/
+fonts=(FreeMono)
+styles=("" Bold)
+ext=("otf")
+sizes=(8 9 10 12 14 16 18 20 24 32)
 
 for f in ${fonts[*]}
 do
@@ -26,12 +27,12 @@ do
 		st=${styles[$index]}
 		for si in ${sizes[*]}
 		do
-			infile=$inpath$f$st".ttf"
+			infile=$inpath$f$st"-euro.$ext"
 			if [ -f $infile ] # Does source combination exist?
 			  then
-				outfile=$outpath$f$st$si"pt7b.h"
+				outfile=$outpath$f$st"_euro"$si"pt8b.h"
 #				printf "%s %s %s > %s\n" $convert $infile $si $outfile
-				$convert $infile $si > $outfile
+				$convert $infile $si 32 255  > $outfile
 			fi
 		done
 	done
