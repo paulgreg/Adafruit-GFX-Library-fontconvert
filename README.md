@@ -1,4 +1,4 @@
-# Adafruit-GFX-Librfary-fontconvert
+# Adafruit-GFX-Library-fontconvert
 
 That repository is an extract from [Adafruit-GFX-Library](https://github.com/adafruit/Adafruit-GFX-Library).
 
@@ -6,11 +6,11 @@ That repository is an extract from [Adafruit-GFX-Library](https://github.com/ada
 
  Some generated fonts have been generated in different size in `fontconvert/out` directory.
 
-## To generate fonts with € sign
+## To generate a font with € sign
 
   * install [fontforge](https://fontforge.org)
   * go to the  € character at position 0x20AC, copy it to 0x80
-  * generate fonts (ignore warnings)
+  * generate the font (ignore warnings)
   * use fontconvert program like `./fontconvert font-with-euro-sign-at-0x80.otf 9 32 255 > font.h` to generate a 9pt font size with characters from 32 to 255 (€ will be at 0x80)
 
 ### Usage exemple
